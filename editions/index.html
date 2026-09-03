@@ -1,0 +1,313 @@
+<!doctype html>
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#fafafa" name="theme-color" />
+    <meta
+      content="比较 APIGO Community、APIGO Cloud 与 Enterprise 的部署方式、模型接入、开放边界和服务保障。"
+      name="description"
+    />
+    <meta content="版本对比 · APIGO" property="og:title" />
+    <meta
+      content="为团队选择 Community、Cloud 或 Enterprise 的起点。"
+      property="og:description"
+    />
+    <meta content="website" property="og:type" />
+    <title>版本对比 · APIGO</title>
+    <link href="/brand/apigo-logo.png" rel="icon" type="image/png" />
+    <script>
+      try {
+        var t = localStorage.getItem("apigo-theme");
+        document.documentElement.dataset.theme =
+          t === "dark" || t === "light"
+            ? t
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.motion =
+          localStorage.getItem("apigo-motion") === "paused" ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "paused"
+            : "running";
+      } catch (e) {
+        document.documentElement.dataset.theme = matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches
+          ? "dark"
+          : "light";
+      }
+    </script>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body data-page="editions">
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a aria-label="Api·Go 首页" class="brand" href="%BASE_URL%"
+          ><img
+            alt="Api·Go"
+            class="brand-logo"
+            decoding="async"
+            height="164"
+            src="/brand/apigo-logo.png"
+            width="588"
+        /></a>
+        <button
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="打开导航"
+          class="menu-toggle"
+        >
+          <span></span><span></span>
+        </button>
+        <nav aria-label="主导航" id="main-nav">
+          <a aria-current="page" href="%BASE_URL%platform/">产品</a
+          ><a href="%BASE_URL%docs/">文档</a
+          ><a href="%BASE_URL%enterprise/">企业</a
+          ><a href="%BASE_URL%resources/">资源</a
+          ><a href="%BASE_URL%community/">社区</a
+          ><button
+            aria-label="切换为深色外观"
+            class="theme-toggle"
+            type="button"
+          >
+            <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+              <path
+                d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              ></path>
+            </svg></button
+          ><a
+            class="button button-small"
+            href="https://www.apigo.ai/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >进入云平台 <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro container">
+        <span class="eyebrow">版本对比 / 从社区到企业</span>
+        <h1>选择适合你的开始。</h1>
+        <p>
+          开放基础能力持续生长；云服务降低运维投入；企业方案根据组织边界和交付要求评估。
+        </p>
+      </section>
+      <section class="section container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">01 / 三种使用路径</span>
+            <h2>保持选择，<br />也保持边界。</h2>
+          </div>
+          <p>
+            以下是产品设计与交付边界的说明。实际可用能力以仓库发布说明、云平台页面及企业合同为准。
+          </p>
+        </div>
+        <div class="edition-grid">
+          <article class="edition reveal">
+            <span class="edition-label">自主构建</span>
+            <h3>Community</h3>
+            <p>给希望掌握基础设施的开发者和团队。</p>
+            <div class="edition-value">开放基础<span>分阶段发布中</span></div>
+            <ul class="check-list">
+              <li>模型网关与基础路由</li>
+              <li>团队空间、Key 与基础配额</li>
+              <li>基础用量、日志与审计</li>
+              <li>使用自己的模型 Key</li>
+            </ul>
+            <a class="button button-outline" href="%BASE_URL%opensource/"
+              >查看开源项目 ↗</a
+            ><small>基础设施与模型调用费用由使用者承担。</small>
+          </article>
+          <article class="edition edition-cloud reveal">
+            <span class="edition-label"
+              >托管云服务 <span class="edition-tag">现有云平台</span></span
+            >
+            <h3>APIGO Cloud</h3>
+            <p>给希望快速接入模型、专注业务的团队。</p>
+            <div class="edition-value">即刻接入<span>由 APIGO 运营</span></div>
+            <ul class="check-list">
+              <li>统一 API 与托管模型接入</li>
+              <li>云端 Workspace 与用量管理</li>
+              <li>集中管理模型费用与账单</li>
+              <li>持续更新的商业能力</li>
+            </ul>
+            <a
+              class="button"
+              href="https://www.apigo.ai/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >进入云平台 ↗</a
+            ><small>模型、价格和能力以云平台当前页面为准。</small>
+          </article>
+          <article class="edition reveal">
+            <span class="edition-label">企业私有化</span>
+            <h3>Enterprise</h3>
+            <p>给有专属环境与组织治理需求的企业。</p>
+            <div class="edition-value">专属方案<span>按需评估交付</span></div>
+            <ul class="check-list">
+              <li>VPC、私有化或混合部署方案</li>
+              <li>企业身份与权限集成</li>
+              <li>审计、数据驻留与模型池规划</li>
+              <li>商业授权与专属支持</li>
+            </ul>
+            <a class="button button-outline" href="%BASE_URL%enterprise/"
+              >了解企业方案 ↗</a
+            ><small>能力范围、交付与 SLA 以双方合同为准。</small>
+          </article>
+        </div>
+        <details class="comparison" open="">
+          <summary>
+            完整能力与开源边界 <span aria-hidden="true">＋</span>
+          </summary>
+          <div
+            aria-label="版本能力对比，可横向滚动"
+            class="table-scroll"
+            role="region"
+            tabindex="0"
+          >
+            <table>
+              <caption>
+                产品版本设计；实际可用能力以发布说明、云平台及企业合同为准。
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">能力 / 交付</th>
+                  <th scope="col">Community</th>
+                  <th scope="col">APIGO Cloud</th>
+                  <th scope="col">Enterprise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">运行环境</th>
+                  <td>自行部署</td>
+                  <td>APIGO 托管</td>
+                  <td>专属 / 私有环境</td>
+                </tr>
+                <tr>
+                  <th scope="row">模型接入</th>
+                  <td>自带模型 Key</td>
+                  <td>托管模型服务</td>
+                  <td>按需接入与私有模型池</td>
+                </tr>
+                <tr>
+                  <th scope="row">网关与基础平台</th>
+                  <td>计划开放源码</td>
+                  <td>托管使用</td>
+                  <td>按交付方案集成</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lyra 智能能力</th>
+                  <td>不包含</td>
+                  <td>商业托管，按上线范围提供</td>
+                  <td>闭源容器 / 二进制授权</td>
+                </tr>
+                <tr>
+                  <th scope="row">企业身份与治理</th>
+                  <td>基础成员权限</td>
+                  <td>以云端提供为准</td>
+                  <td>SSO / SCIM 等按需评估</td>
+                </tr>
+                <tr>
+                  <th scope="row">运维与服务保障</th>
+                  <td>团队自行负责</td>
+                  <td>云平台运营</td>
+                  <td>合同约定 SLA 与支持</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+      <section class="final-cta">
+        <div class="container">
+          <div>
+            <span class="eyebrow">按你的节奏开始</span>
+            <h2>先接入，再决定边界。</h2>
+          </div>
+          <div>
+            <a
+              class="button"
+              href="https://www.apigo.ai/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >进入 APIGO Cloud ↗</a
+            ><a class="text-link" href="%BASE_URL%enterprise/"
+              >讨论企业方案 ↗</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div>
+          <a aria-label="Api·Go 首页" class="brand" href="%BASE_URL%"
+            ><img
+              alt="Api·Go"
+              class="brand-logo"
+              decoding="async"
+              height="164"
+              src="/brand/apigo-logo.png"
+              width="588"
+          /></a>
+          <p>开放连接模型，让 AI 落地企业。</p>
+        </div>
+        <div>
+          <h3>构建</h3>
+          <a href="%BASE_URL%platform/">产品</a
+          ><a href="%BASE_URL%docs/">文档</a
+          ><a href="%BASE_URL%resources/">资源</a>
+        </div>
+        <div>
+          <h3>使用</h3>
+          <a
+            href="https://www.apigo.ai/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >APIGO Cloud ↗</a
+          ><a href="%BASE_URL%enterprise/">企业</a
+          ><a href="%BASE_URL%editions/">版本与边界</a>
+        </div>
+        <div>
+          <h3>连接</h3>
+          <a
+            href="https://github.com/apigo-labs"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub ↗</a
+          ><a href="%BASE_URL%community/">社区</a
+          ><a href="mailto:sales@apigo.ai">商务咨询 ↗</a
+          ><a href="mailto:support@apigo.ai">技术支持 ↗</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 APIGO. 保留所有权利。</span
+        ><span>由社区共建 · 为企业而生</span
+        ><a
+          href="https://www.apigo.ai/"
+          rel="noopener noreferrer"
+          target="_blank"
+          >apigo.ai ↗</a
+        ><button
+          aria-label="暂停背景动画"
+          aria-pressed="false"
+          class="motion-toggle"
+          type="button"
+        >
+          <span aria-hidden="true" class="motion-icon">Ⅱ</span
+          ><span>暂停动画</span>
+        </button>
+      </div>
+    </footer>
+    <div aria-live="polite" class="toast" role="status"></div>
+    <script src="/src/main.ts" type="module"></script>
+  </body>
+</html>

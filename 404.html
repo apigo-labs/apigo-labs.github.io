@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#fafafa" name="theme-color" />
+    <meta
+      content="返回 APIGO 官网，继续了解开源项目和企业方案。"
+      name="description"
+    />
+    <meta content="页面未找到 · APIGO" property="og:title" />
+    <meta
+      content="返回 APIGO 官网，继续了解开源项目和企业方案。"
+      property="og:description"
+    />
+    <meta content="website" property="og:type" />
+    <title>页面未找到 · APIGO</title>
+    <link href="/brand/apigo-logo.png" rel="icon" type="image/png" />
+    <script>
+      try {
+        var t = localStorage.getItem("apigo-theme");
+        document.documentElement.dataset.theme =
+          t === "dark" || t === "light"
+            ? t
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.motion =
+          localStorage.getItem("apigo-motion") === "paused" ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "paused"
+            : "running";
+      } catch (e) {
+        document.documentElement.dataset.theme = matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches
+          ? "dark"
+          : "light";
+      }
+    </script>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body data-page="not-found">
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a aria-label="Api·Go 首页" class="brand" href="%BASE_URL%"
+          ><img
+            alt="Api·Go"
+            class="brand-logo"
+            decoding="async"
+            height="164"
+            src="/brand/apigo-logo.png"
+            width="588" /></a
+        ><button
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="打开导航"
+          class="menu-toggle"
+        >
+          <span></span><span></span>
+        </button>
+        <nav aria-label="主导航" id="main-nav">
+          <a href="%BASE_URL%platform/">产品</a
+          ><a href="%BASE_URL%docs/">文档</a
+          ><a href="%BASE_URL%enterprise/">企业</a
+          ><a href="%BASE_URL%resources/">资源</a
+          ><a href="%BASE_URL%community/">社区</a
+          ><button
+            aria-label="切换为深色外观"
+            class="theme-toggle"
+            type="button"
+          >
+            <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+              <path
+                d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              ></path>
+            </svg></button
+          ><a
+            class="button button-small"
+            href="https://www.apigo.ai/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >进入云平台 <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro container not-found">
+        <span class="eyebrow">404 / 页面未找到</span>
+        <h1>这条路径，<br />还没有连接。</h1>
+        <p>你可以返回首页，或从接入指南继续探索。</p>
+        <div class="hero-actions">
+          <a class="button" href="%BASE_URL%">返回首页 →</a
+          ><a class="button button-outline" href="%BASE_URL%docs/"
+            >接入指南 ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div>
+          <a aria-label="Api·Go 首页" class="brand" href="%BASE_URL%"
+            ><img
+              alt="Api·Go"
+              class="brand-logo"
+              decoding="async"
+              height="164"
+              src="/brand/apigo-logo.png"
+              width="588"
+          /></a>
+          <p>开放连接模型，让 AI 落地企业。</p>
+        </div>
+        <div>
+          <h3>构建</h3>
+          <a href="%BASE_URL%platform/">产品</a
+          ><a href="%BASE_URL%docs/">文档</a
+          ><a href="%BASE_URL%resources/">资源</a>
+        </div>
+        <div>
+          <h3>使用</h3>
+          <a
+            href="https://www.apigo.ai/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >APIGO Cloud ↗</a
+          ><a href="%BASE_URL%enterprise/">企业</a
+          ><a href="%BASE_URL%editions/">版本与边界</a>
+        </div>
+        <div>
+          <h3>连接</h3>
+          <a
+            href="https://github.com/apigo-labs"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub ↗</a
+          ><a href="%BASE_URL%community/">社区</a
+          ><a href="mailto:sales@apigo.ai">商务咨询 ↗</a
+          ><a href="mailto:support@apigo.ai">技术支持 ↗</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 APIGO. 保留所有权利。</span
+        ><span>由社区共建 · 为企业而生</span
+        ><a
+          href="https://www.apigo.ai/"
+          rel="noopener noreferrer"
+          target="_blank"
+          >apigo.ai ↗</a
+        >
+        <button
+          aria-label="暂停背景动画"
+          aria-pressed="false"
+          class="motion-toggle"
+          type="button"
+        >
+          <span aria-hidden="true" class="motion-icon">Ⅱ</span
+          ><span>暂停动画</span>
+        </button>
+      </div>
+    </footer>
+    <div aria-live="polite" class="toast" role="status"></div>
+    <script src="/src/main.ts" type="module"></script>
+  </body>
+</html>

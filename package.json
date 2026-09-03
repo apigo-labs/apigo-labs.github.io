@@ -1,0 +1,27 @@
+{
+  "name": "@apigo-labs/website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "build": "npm run check && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "setup": "node scripts/setup-git.mjs",
+    "policy:check": "node scripts/check-policy.mjs",
+    "policy:test": "node --test scripts/check-policy.test.mjs",
+    "policy:history": "node scripts/check-policy.mjs --history=HEAD"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}

@@ -1,0 +1,28 @@
+name: Website checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run policy:check
+      - run: npm run policy:test
+      - run: npm run policy:history
+      - run: npm run format:check
+      - run: npm run build
+      - run: node scripts/verify-site.mjs dist /
+      - run: npm run build -- --base=/website/ --outDir=output/pages-dist
+      - run: node scripts/verify-site.mjs output/pages-dist /website/

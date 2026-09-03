@@ -65,11 +65,13 @@ The user explicitly requested replacing the website's previous commit history. P
 - [x] Confirm the approved repository rename and root-site requirements.
 - [x] Update repository links and bilingual deployment documentation; retain root and subpath build coverage.
 - [x] Rename the GitHub repository to `apigo-labs.github.io` and update the local SSH remote.
-- [ ] Push a new English commit, verify GitHub Actions, and compare the published root-site artifacts.
+- [x] Push a new English commit, verify GitHub Actions, and compare the published root-site artifacts.
 
 ### Review
 
 The user approved renaming the repository so the site can use `https://apigo-labs.github.io/`. Keep the local `website` directory and normal compliant commit history. The Pages workflow already derives the deployment prefix from GitHub configuration.
+
+The repository and SSH remote now use `apigo-labs/apigo-labs.github.io`. Commit `6a4656e` passed Website checks and Pages deployment. All 15 root-site files, including the custom 404 response, match the local root build byte for byte. Browser checks confirmed root-based navigation, Chinese/English guide switching, the new repository link, and no mobile overflow or page errors. Local validation passed 15 policy tests, formatting, TypeScript, and both root/subpath builds (10 pages, 246 local links/assets each).
 
 ## 中文
 
@@ -78,8 +80,10 @@ The user approved renaming the repository so the site can use `https://apigo-lab
 - [x] 确认用户已同意仓库改名及根站点要求。
 - [x] 更新仓库链接和双语部署文档，保留根路径与子路径构建覆盖。
 - [x] 将 GitHub 仓库改名为 `apigo-labs.github.io`，更新本地 SSH remote。
-- [ ] 推送新的英文提交，验证 GitHub Actions 并比对已发布的根站点产物。
+- [x] 推送新的英文提交，验证 GitHub Actions 并比对已发布的根站点产物。
 
 ### Review
 
 用户同意通过仓库改名使用 `https://apigo-labs.github.io/`。保留本地 `website` 目录与正常的合规提交历史。Pages 工作流已从 GitHub 配置获取部署前缀。
+
+仓库与 SSH remote 已使用 `apigo-labs/apigo-labs.github.io`。提交 `6a4656e` 的 Website checks 与 Pages 发布均成功。根站点 15 个文件（含自定义 404 响应）与本地根路径构建逐字节一致。浏览器确认根路径导航、中英文指南切换和新仓库链接有效，移动端无横向溢出、无页面异常。本地通过 15 项规范测试、格式检查、TypeScript 和根路径/子路径构建（各 10 页、246 条本地链接/资源）。

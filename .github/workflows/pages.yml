@@ -33,7 +33,7 @@ jobs:
       - run: npm run policy:test
       - run: npm run policy:history
       - run: npm run format:check
-      - name: Build the Pages project site
+      - name: Build the configured Pages site
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |

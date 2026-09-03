@@ -50,11 +50,11 @@ The five independent navigation sections are Product, Docs, Enterprise, Resource
 
 ## GitHub Pages
 
-Project site: [apigo-labs.github.io/website](https://apigo-labs.github.io/website/). The repository's Settings → Pages source is GitHub Actions.
+Organization site: [apigo-labs.github.io](https://apigo-labs.github.io/). The repository's Settings → Pages source is GitHub Actions.
 
 `.github/workflows/pages.yml` runs on pushes to `main` or manual dispatch. It checks policy, tests, formatting, the production build, and local links before uploading and publishing `dist/`. Deployment uses the `github-pages` environment. Pages write and OIDC permissions are scoped to the deployment job; no personal access token is required.
 
-The build prefix comes from `actions/configure-pages`'s `base_path`. HTML links use `%BASE_URL%`, script-generated links use `import.meta.env.BASE_URL`, and Vite handles image and stylesheet paths. Local development defaults to `/`; the GitHub project site uses `/website/`.
+The build prefix comes from `actions/configure-pages`'s `base_path`. HTML links use `%BASE_URL%`, script-generated links use `import.meta.env.BASE_URL`, and Vite handles image and stylesheet paths. Local development and the organization site both use `/`. The repository is named `apigo-labs.github.io`; the local checkout may remain named `website`. The following optional subpath build checks portability and is not the production URL.
 
 ```bash
 npm run build -- --base=/website/ --outDir=output/pages-dist
@@ -83,7 +83,7 @@ git config --local user.useConfigOnly true
 git config --local core.hooksPath .githooks
 ```
 
-This checkout uses `git@github-enterprises:apigo-labs/website.git`. The existing `github-enterprises` SSH alias connects to `ssh.github.com:443`. SSH credentials authenticate the connection; Git author and committer metadata identify commits. Reapply the local setup after cloning. Keep the existing SSH credentials outside the repository.
+This checkout uses `git@github-enterprises:apigo-labs/apigo-labs.github.io.git`. The existing `github-enterprises` SSH alias connects to `ssh.github.com:443`. SSH credentials authenticate the connection; Git author and committer metadata identify commits. Reapply the local setup after cloning. Keep the existing SSH credentials outside the repository.
 
 ## Materials and motion
 

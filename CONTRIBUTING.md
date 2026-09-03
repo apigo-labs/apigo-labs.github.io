@@ -36,7 +36,7 @@ The pre-commit hook validates staged content so unstaged edits cannot hide a fai
 
 ## Review requirements
 
-- Confirm that documentation translations were updated together and that public guide language links work under `/website/`.
+- Confirm that documentation translations were updated together and that public guide language links work at the production root `/` and the optional `/website/` portability prefix.
 - Check actual production output and meaningful browser interactions. Preserve reduced motion, mobile layout, keyboard navigation, and the original Logo.
 - Distinguish available functionality from planned Community capabilities and contracted commercial delivery. Do not invent licenses, packages, customer data, or performance results.
 - Keep task plans and reusable lessons bilingual. Keep temporary screenshots, handoffs, linked worktrees, credentials, and generated build output outside published source.

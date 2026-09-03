@@ -50,11 +50,11 @@ npm run format:check
 
 ## GitHub Pages 发布
 
-项目站点地址：[apigo-labs.github.io/website](https://apigo-labs.github.io/website/)。仓库 Settings → Pages 的 Source 使用 GitHub Actions。
+组织站点地址：[apigo-labs.github.io](https://apigo-labs.github.io/)。仓库 Settings → Pages 的 Source 使用 GitHub Actions。
 
 `.github/workflows/pages.yml` 在 main 推送或手动触发时检查语言规范、测试、格式、构建与本地链接，再上传并发布 `dist/`。部署使用 `github-pages` 环境；Pages 写权限与 OIDC 仅授予部署任务，不需要个人访问令牌。
 
-构建前缀取自 `actions/configure-pages` 的 `base_path`。HTML 站内链接使用 `%BASE_URL%`，脚本内链接使用 `import.meta.env.BASE_URL`，图片与样式由 Vite 处理。本地默认 `/`，GitHub 项目站点使用 `/website/`。
+构建前缀取自 `actions/configure-pages` 的 `base_path`。HTML 站内链接使用 `%BASE_URL%`，脚本内链接使用 `import.meta.env.BASE_URL`，图片与样式由 Vite 处理。本地开发与组织站点均使用 `/`。仓库名称为 `apigo-labs.github.io`，本地目录可继续命名为 `website`。下面的可选子路径构建用于验证可移植性，不是生产访问地址。
 
 ```bash
 npm run build -- --base=/website/ --outDir=output/pages-dist
@@ -83,7 +83,7 @@ git config --local user.useConfigOnly true
 git config --local core.hooksPath .githooks
 ```
 
-当前副本使用 `git@github-enterprises:apigo-labs/website.git`，已有 SSH 别名 `github-enterprises` 连接 `ssh.github.com:443`。SSH 凭据用于认证连接，Git author 和 committer 元数据用于标识提交。克隆后重新运行本地配置，现有 SSH 凭据保留在仓库之外。
+当前副本使用 `git@github-enterprises:apigo-labs/apigo-labs.github.io.git`，已有 SSH 别名 `github-enterprises` 连接 `ssh.github.com:443`。SSH 凭据用于认证连接，Git author 和 committer 元数据用于标识提交。克隆后重新运行本地配置，现有 SSH 凭据保留在仓库之外。
 
 ## 材质与动画
 

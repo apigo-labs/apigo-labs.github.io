@@ -121,11 +121,11 @@ Keep the current slogan, immersive composition, official Logo, and MaaS product 
 - [x] Locate motion controls and inspect the existing hero visual.
 - [x] Implement responsive digital signal paths with shared pause/reduced-motion controls and offscreen suspension.
 - [x] Verify desktop/mobile appearance, actual animation progression and freezing, navigation, both builds, and policy checks.
-- [ ] Publish and verify the custom-domain site.
+- [x] Publish and verify the custom-domain site.
 
 ### Review
 
-CodeGraph sync completed with 10 files and 121 nodes. The motion chain is `src/main.ts` → `updateMotion` → root `data-motion`; `src/immersive.ts` controls hero parallax and section navigation. HTML/CSS fall outside the graph index and are inspected directly. Scope is the homepage visual only. The hero now contains 28 SVG signal lanes, packet trains, seven nodes, and a restrained grid/scan. Successive browser screenshots confirm packet movement; pause persists across reloads, and the hero suspends offscreen and resumes on return. Desktop at 1265/1440 px and mobile at 320/390 px have no horizontal overflow. Reduced-motion behavior was checked against the existing shared CSS and preference logic; system preference emulation was not performed. Both deployment-prefix builds pass with 10 pages and 246 local references each; all 15 policy tests, formatting, and TypeScript checks pass. Publication remains pending.
+CodeGraph sync completed with 10 files and 121 nodes. The motion chain is `src/main.ts` → `updateMotion` → root `data-motion`; `src/immersive.ts` controls hero parallax and section navigation. HTML/CSS fall outside the graph index and are inspected directly. Scope is the homepage visual only. The hero now contains 28 SVG signal lanes, packet trains, seven nodes, and a restrained grid/scan. Successive browser screenshots confirm packet movement; pause persists across reloads, and the hero suspends offscreen and resumes on return. Desktop at 1265/1440 px and mobile at 320/390 px have no horizontal overflow. Reduced-motion behavior was checked against the existing shared CSS and preference logic; system preference emulation was not performed. Both deployment-prefix builds pass with 10 pages and 246 local references each; all 15 policy tests, formatting, and TypeScript checks pass. Commit `ed5e86b` was published by successful Pages run `33858538860`. All 15 files served over HTTPS match the local root build. A production browser confirms 28 packet paths and seven nodes with the new asset bundle.
 
 ## 中文
 
@@ -136,8 +136,8 @@ CodeGraph sync completed with 10 files and 121 nodes. The motion chain is `src/m
 - [x] 定位动效控制，检查现有首屏视觉。
 - [x] 实现响应式数字信号路径，接入暂停/减少动画及离屏暂停。
 - [x] 验证桌面/手机视觉、实际动画推进与冻结、导航、两种构建和规范检查。
-- [ ] 发布并验证自定义域名站点。
+- [x] 发布并验证自定义域名站点。
 
 ### Review
 
-CodeGraph 同步完成，覆盖 10 个文件、121 个节点。动效链路为 `src/main.ts` → `updateMotion` → 根节点 `data-motion`；`src/immersive.ts` 控制首屏视差与章节导航。HTML/CSS 不在图索引内，已直接检查。本次范围仅为首页视觉。首屏新增 28 条 SVG 信号线路、数据脉冲、7 个节点及克制的网格/扫描线。连续浏览器截图确认数据包移动；暂停状态在刷新后保留，离屏暂停、返回恢复。1265/1440 像素桌面与 320/390 像素手机视口无横向溢出。减少动画行为已检查现有共享 CSS 与偏好控制逻辑，未模拟系统偏好。两种部署前缀构建各验证 10 个页面和 246 个本地引用；15 项规范测试、格式与 TypeScript 检查均通过。发布待完成。
+CodeGraph 同步完成，覆盖 10 个文件、121 个节点。动效链路为 `src/main.ts` → `updateMotion` → 根节点 `data-motion`；`src/immersive.ts` 控制首屏视差与章节导航。HTML/CSS 不在图索引内，已直接检查。本次范围仅为首页视觉。首屏新增 28 条 SVG 信号线路、数据脉冲、7 个节点及克制的网格/扫描线。连续浏览器截图确认数据包移动；暂停状态在刷新后保留，离屏暂停、返回恢复。1265/1440 像素桌面与 320/390 像素手机视口无横向溢出。减少动画行为已检查现有共享 CSS 与偏好控制逻辑，未模拟系统偏好。两种部署前缀构建各验证 10 个页面和 246 个本地引用；15 项规范测试、格式与 TypeScript 检查均通过。提交 `ed5e86b` 已通过 Pages 任务 `33858538860` 成功发布。HTTPS 返回的全部 15 个文件与本地根路径构建一致，生产浏览器确认新资源包已加载，并生成 28 条数据路径与 7 个节点。

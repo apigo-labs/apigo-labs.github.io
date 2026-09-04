@@ -1,4 +1,4 @@
-import "./digital-flow";
+import "./hero-particles";
 
 const immersion = document.querySelector<HTMLElement>(".immersion");
 if (immersion) {

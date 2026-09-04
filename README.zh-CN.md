@@ -40,7 +40,7 @@ npm run format:check
 - `src/style.css`：全站基础、明暗主题、导航、文档和表单。
 - `src/editorial.css`：独立栏目的开放排版、细分隔线和响应式布局。
 - `src/immersive.css` / `src/immersive.ts`：首页连续深色章节、滚动微视差、章节定位与路由路径展示。
-- `src/digital-flow.ts`：装饰性 SVG 信号线路、离散数据脉冲、节点响应与离屏暂停。
+- `src/hero-particles.ts`：沿弧形光路运动的稀疏发光粒子，以及离屏暂停。
 - `src/main.ts`：移动导航、主题与动效偏好、商业路由策略示意切换、光标高光、架构标签页、复制与邮件草稿；通用控件跟随指南语言。
 
 使用 Vite + TypeScript 与静态 HTML。无需数据库、环境密钥、第三方字体、分析脚本或外部图片。构建产物可部署到支持目录索引的静态服务器。自定义域名尚未指定；后续绑定时配置 canonical、社交分享图片及 sitemap。请将服务器的未找到页面映射到 `404.html` 并返回 HTTP 404。
@@ -96,12 +96,12 @@ git config --local core.hooksPath .githooks
 
 ## 材质与动画
 
-首页采用连续的石墨色空间，以贯穿画面的数字信号路径呈现模型能力的汇聚与流动。接入、FinOps、路由分别通过开放连线、成本归属表和可切换路径展开，Community / Cloud / Enterprise 采用整行入口。内容不使用层叠卡片；独立栏目用大字标题、留白和细分隔线组织信息。官方 Logo 保持原色，蓝紫橙只在光线和交互细节中呼应。
+首页采用连续的石墨色空间，以大幅光纤主视觉呈现模型能力的汇聚与流动。接入、FinOps、路由分别通过开放连线、成本归属表和可切换路径展开，Community / Cloud / Enterprise 采用整行入口。内容不使用层叠卡片；独立栏目用大字标题、留白和细分隔线组织信息。官方 Logo 保持原色，蓝紫橙只在光线和交互细节中呼应。
 
 本网站在浏览器中实现 Fluent 风格的材质效果，不依赖 Windows 原生 Mica 或访问桌面壁纸。材质语义参考 [Mica](https://learn.microsoft.com/en-us/windows/apps/design/style/mica) 与 [Acrylic](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)：中性漫射底色与半透明导航区分层使用。
 
 - 首页固定使用深色视觉；独立页面默认跟随系统，可手动切换明暗，在浏览器 localStorage 保存偏好。
-- 离散数据包沿 SVG 路由线路传输，辅以克制的节点响应与扫描线；首屏离开视口后暂停。光标微视差与章节导航使用原生滚动，不接管滚轮。
+- 原有光纤画面保持轻缓漂移，其上叠加沿弧形路径运动的稀疏发光粒子；首屏离开视口后暂停。光标微视差与章节导航使用原生滚动，不接管滚轮。
 - 可以暂停背景动画。遵守 `prefers-reduced-motion`，后台页面暂停动效；手机不启用指针微视差。
 - 不支持 backdrop-filter 的浏览器使用实色导航回退；所有链接和表单仍可用。
 
@@ -109,4 +109,4 @@ git config --local core.hooksPath .githooks
 
 `public/brand/apigo-logo.png` 为用户提供的官方透明 Logo 原图（588 × 164），保持原始像素和比例；导航、页脚、首屏与产品图共用这一素材。站点图标同样使用完整原图，不再使用临时绘制的 A 标识。
 
-`public/media/maas-fiber-flow.png` 为本轮生成的装饰性主视觉（1672 × 941），与官方 Logo 分开保存。视觉不包含客户标识或实际业务数据；图片通过本地静态资源加载并在首屏预加载，作为数字线路下的低强度背景，以及 JavaScript 不可用时的降级展示；减少动画时保留静态构图。
+`public/media/maas-fiber-flow.png` 为本轮生成的装饰性主视觉（1672 × 941），与官方 Logo 分开保存。视觉不包含客户标识或实际业务数据；图片通过本地静态资源加载并在首屏预加载，继续作为首屏主视觉，粒子仅作为独立装饰层叠加，JavaScript 不可用时图片仍然可见；减少动画时保留静态构图。

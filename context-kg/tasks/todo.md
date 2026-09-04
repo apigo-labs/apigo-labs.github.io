@@ -141,3 +141,25 @@ CodeGraph sync completed with 10 files and 121 nodes. The motion chain is `src/m
 ### Review
 
 CodeGraph 同步完成，覆盖 10 个文件、121 个节点。动效链路为 `src/main.ts` → `updateMotion` → 根节点 `data-motion`；`src/immersive.ts` 控制首屏视差与章节导航。HTML/CSS 不在图索引内，已直接检查。本次范围仅为首页视觉。首屏新增 28 条 SVG 信号线路、数据脉冲、7 个节点及克制的网格/扫描线。连续浏览器截图确认数据包移动；暂停状态在刷新后保留，离屏暂停、返回恢复。1265/1440 像素桌面与 320/390 像素手机视口无横向溢出。减少动画行为已检查现有共享 CSS 与偏好控制逻辑，未模拟系统偏好。两种部署前缀构建各验证 10 个页面和 246 个本地引用；15 项规范测试、格式与 TypeScript 检查均通过。提交 `ed5e86b` 已通过 Pages 任务 `33858538860` 成功发布。HTTPS 返回的全部 15 个文件与本地根路径构建一致，生产浏览器确认新资源包已加载，并生成 28 条数据路径与 7 个节点。
+
+# Restore fiber motion with particles / 恢复光纤并叠加粒子
+
+## English
+
+- [x] Confirm the correction: retain the original fiber image, brightness, drift, and composition.
+- [x] Remove the digital circuit overlay and add sparse glowing particles along curved fiber paths.
+- [ ] Verify desktop/mobile, pause controls, required checks, and publication.
+
+### Review
+
+The previous circuit treatment changed the visual identity too much. This correction restores the original base and adds particles only. Desktop and 390 px mobile previews confirm the restored artwork, no circuit overlay, and no horizontal overflow. The pause control freezes both the image and particles. Both prefix builds and 15 policy tests pass. Publication is the remaining step.
+
+## 中文
+
+- [x] 确认纠正范围：保留原光纤图片、亮度、缓动与构图。
+- [x] 移除数字电路覆盖层，仅沿弧形光路添加稀疏发光粒子。
+- [ ] 验证桌面/手机、暂停控制、必需检查与发布。
+
+### Review
+
+上一版电路化处理过度改变了主视觉，本次恢复原有基底，只添加粒子。桌面与 390 像素手机预览确认原图恢复、电路覆盖层移除且无横向溢出；暂停按钮同时冻结原图与粒子。两种前缀构建与 15 项规范测试通过，剩余步骤为发布。

@@ -40,7 +40,13 @@
       }
     </script>
     <link href="/src/style.css" rel="stylesheet" />
-    <link as="image" href="/media/maas-fiber-flow.png" rel="preload" />
+    <link
+      as="image"
+      href="/media/maas-fiber-flow.webp"
+      rel="preload"
+      type="image/webp"
+      fetchpriority="high"
+    />
   </head>
   <body class="immersive-site" data-page="home">
     <a class="skip-link" href="#main">跳至正文</a>
@@ -82,14 +88,17 @@
       <section aria-labelledby="slogan" class="immersive-hero">
         <div aria-hidden="true" class="hero-scene">
           <div class="hero-scene-inner">
-            <img
-              alt=""
-              decoding="async"
-              fetchpriority="high"
-              height="941"
-              src="/media/maas-fiber-flow.png"
-              width="1672"
-            />
+            <picture>
+              <source srcset="/media/maas-fiber-flow.webp" type="image/webp" />
+              <img
+                alt=""
+                decoding="async"
+                fetchpriority="high"
+                height="941"
+                src="/media/maas-fiber-flow.png"
+                width="1672"
+              />
+            </picture>
           </div>
         </div>
         <div class="immersion-container hero-content">

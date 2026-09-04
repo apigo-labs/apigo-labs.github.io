@@ -163,3 +163,25 @@ The previous circuit treatment changed the visual identity too much. This correc
 ### Review
 
 上一版电路化处理过度改变了主视觉，本次恢复原有基底，只添加粒子。桌面与 390 像素手机预览确认原图恢复、电路覆盖层移除且无横向溢出；暂停按钮同时冻结原图与粒子。两种前缀构建与 15 项规范测试通过，Pages 任务 `33859685330` 已成功发布提交 `9507abd`，全部 15 个 HTTPS 资源与本地构建一致。生产 DOM 确认原图透明度恢复为 0.84、光纤缓动启用、存在 22 条粒子路径且电路线条已移除。
+
+# Preserve the fiber background / 保留光纤背景
+
+## English
+
+- [x] Compare the reference pixels and inspect the production browser.
+- [x] Add a lossless delivery variant while preserving the original PNG.
+- [ ] Verify pixel equality, complete loading, required checks, and publication.
+
+### Review
+
+The supplied image and source PNG have identical pixels. The live image request is incomplete and visibly truncated. The original artwork must remain beneath the particles. The new lossless WebP retains identical RGB pixels and reduces the asset from 2,131,310 to 1,419,928 bytes. Local browser loading is complete and the full image is visible. Both prefix builds, all 15 policy tests, formatting, and TypeScript checks pass.
+
+## 中文
+
+- [x] 对比参考图像素，检查生产浏览器。
+- [x] 增加无损加载格式，并保留原 PNG。
+- [ ] 验证像素一致、完整加载、必需检查与发布。
+
+### Review
+
+用户提供图片与源 PNG 像素完全相同。线上图片请求未完成且显示截断，原图必须保留在粒子层下面。无损 WebP 保留完全相同的 RGB 像素，将资源从 2,131,310 字节减至 1,419,928 字节。本地浏览器已完整加载并显示全图。两种前缀构建、15 项规范测试、格式与 TypeScript 检查均通过。

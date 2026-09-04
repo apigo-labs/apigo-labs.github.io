@@ -2,6 +2,8 @@
 
 ## English
 
+- The supplied fiber background is mandatory. Verify full image decoding in the production browser; valid dimensions alone do not prove a complete image download.
+
 - When asked to enrich an existing animation, preserve its artwork, brightness, geometry, and motion. Add particles as a secondary layer; do not replace the composition with a new circuit aesthetic.
 
 - **Language contract:** The user requires English code comments and complete commit messages across all projects under `opensource/`. Documentation must have equivalent English and Simplified Chinese versions. This overrides the earlier Chinese-only artifact rule; conversation and localized product UI may remain Chinese. Enforce the rules with versioned guidance, staged-content/message hooks, and CI; verify translations manually.
@@ -13,6 +15,8 @@
 - **Verified publication:** Verify both `/` and `/website/`, workflow completion, remote commit identity, and served artifact bytes. A local build or successful push alone does not prove the public site is updated. History replacement requires explicit authorization and an exact remote lease.
 
 ## 中文
+
+- 用户提供的光纤背景必须保留。生产验收须确认图片完整解码，正确尺寸不能证明图片下载完整。
 
 - 为现有动效增加细节时，保留原图、亮度、几何与运动方式。粒子只作为附加层，不能擅自替换成电路风格。
 

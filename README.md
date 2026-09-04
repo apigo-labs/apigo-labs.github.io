@@ -110,3 +110,5 @@ The browser implements Fluent-inspired materials without Windows-native Mica or 
 `public/brand/apigo-logo.png` is the original transparent Logo supplied by the owner (588 × 164). Preserve its pixels, proportions, and colors across navigation, footers, product diagrams, and the site icon.
 
 `public/media/maas-fiber-flow.png` is generated decorative artwork (1672 × 941), stored separately from the official Logo. It contains no customer identities or real usage data. It is served locally and preloaded on the homepage. It remains the dominant hero artwork, with particles added as a separate decorative layer. It remains visible when JavaScript is unavailable. Reduced motion keeps the composition static.
+
+The required fiber background is also served as a lossless WebP (1,419,928 bytes versus the 2,131,310-byte PNG). Decoded RGB pixels are identical to the original and the supplied reference. The WebP is preloaded with high priority; the original PNG remains the picture fallback. Particles never replace the background.

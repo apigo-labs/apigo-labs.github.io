@@ -190,10 +190,10 @@ The supplied image and source PNG have identical pixels. The live image request 
 
 ### Publication verification
 
-Commit `05a7417` passed Pages run `33860729726` and checks run `33860729869`. The production browser reports `complete: true` for the WebP at 1672 × 941; the screenshot confirms the lower fibers are fully rendered beneath the particle layer. All 16 deployed files match the local build.
+Commit `05a7417` passed Pages run `33860729726` and checks run `33860729869`. The production browser reports `complete: true` for the WebP at 1672 × 941; the screenshot confirms the lower fibers are fully rendered beneath the particle layer. Production browser validation succeeded. A complete file-by-file HTTP audit was not obtained because downloading the retained original PNG timed out; the browser successfully loaded the new WebP.
 
 ## 中文
 
 ### 发布验证
 
-提交 `05a7417` 通过 Pages 任务 `33860729726` 和检查任务 `33860729869`。生产浏览器的 WebP 图片状态为 `complete: true`，尺寸 1672 × 941；截图确认下半截光纤已完整显示，粒子仅叠加其上。全部 16 个部署文件与本地构建一致。
+提交 `05a7417` 通过 Pages 任务 `33860729726` 和检查任务 `33860729869`。生产浏览器的 WebP 图片状态为 `complete: true`，尺寸 1672 × 941；截图确认下半截光纤已完整显示，粒子仅叠加其上。生产浏览器验证通过。逐文件 HTTP 核验因保留的原 PNG 下载超时而未全部完成；浏览器已成功完整加载新版 WebP。

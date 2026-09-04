@@ -87,3 +87,25 @@ The repository and SSH remote now use `apigo-labs/apigo-labs.github.io`. Commit 
 用户同意通过仓库改名使用 `https://apigo-labs.github.io/`。保留本地 `website` 目录与正常的合规提交历史。Pages 工作流已从 GitHub 配置获取部署前缀。
 
 仓库与 SSH remote 已使用 `apigo-labs/apigo-labs.github.io`。提交 `6a4656e` 的 Website checks 与 Pages 发布均成功。根站点 15 个文件（含自定义 404 响应）与本地根路径构建逐字节一致。浏览器确认根路径导航、中英文指南切换和新仓库链接有效，移动端无横向溢出、无页面异常。本地通过 15 项规范测试、格式检查、TypeScript 和根路径/子路径构建（各 10 页、246 条本地链接/资源）。
+
+# Custom domain / 自定义域名
+
+## English
+
+- [x] Check DNS and the current GitHub Pages deployment.
+- [x] Bind `opensource.apigo.ai` in Pages and verify DNS and HTTPS.
+- [x] Update bilingual deployment instructions, push the documentation, and verify public access.
+
+### Review
+
+The existing CNAME points to `apigo-labs.github.io`. The site uses a custom GitHub Actions deployment; the custom domain is configured in Pages settings and does not require a repository CNAME file. GitHub confirmed a successful DNS check and Enforce HTTPS was enabled after certificate provisioning. HTTP requests redirect to HTTPS. All 15 files fetched over HTTPS, including the custom 404 response, match the local root build. Both deployment-prefix builds, 15 policy tests, formatting, and TypeScript checks passed.
+
+## 中文
+
+- [x] 检查 DNS 与当前 GitHub Pages 发布状态。
+- [x] 在 Pages 绑定 `opensource.apigo.ai` 并验证 DNS 与 HTTPS。
+- [x] 更新双语部署说明、推送文档并验证公开访问。
+
+### Review
+
+现有 CNAME 指向 `apigo-labs.github.io`。站点通过自定义 GitHub Actions 发布；自定义域名在 Pages 设置中配置，不需要仓库 CNAME 文件。GitHub 已确认 DNS 检查成功，证书就绪后已开启 Enforce HTTPS，HTTP 请求会跳转至 HTTPS。通过 HTTPS 获取的全部 15 个文件（包括自定义 404 响应）均与本地根路径构建一致。两种部署前缀构建、15 项规范测试、格式与 TypeScript 检查均通过。

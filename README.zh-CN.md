@@ -50,7 +50,15 @@ npm run format:check
 
 ## GitHub Pages 发布
 
-组织站点地址：[apigo-labs.github.io](https://apigo-labs.github.io/)。仓库 Settings → Pages 的 Source 使用 GitHub Actions。
+公开站点地址：[opensource.apigo.ai](https://opensource.apigo.ai/)。仓库 Settings → Pages 的 Source 使用 GitHub Actions。
+
+自定义域名配置：
+
+1. 在 Settings → Pages → Custom domain 保存 `opensource.apigo.ai`（不带协议或路径）。
+2. 在 `apigo.ai` 的 DNS 中保留名为 `opensource`、指向 `apigo-labs.github.io` 的 CNAME 记录。
+3. 等待 DNS 检查与证书签发，然后启用 Enforce HTTPS；验证 HTTPS 站点及 `https://apigo-labs.github.io/` 的跳转。
+
+当前自定义 Actions 发布不需要仓库 `CNAME` 文件，以 Pages 设置为准。
 
 `.github/workflows/pages.yml` 在 main 推送或手动触发时检查语言规范、测试、格式、构建与本地链接，再上传并发布 `dist/`。部署使用 `github-pages` 环境；Pages 写权限与 OIDC 仅授予部署任务，不需要个人访问令牌。
 

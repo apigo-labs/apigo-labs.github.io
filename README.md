@@ -50,7 +50,15 @@ The five independent navigation sections are Product, Docs, Enterprise, Resource
 
 ## GitHub Pages
 
-Organization site: [apigo-labs.github.io](https://apigo-labs.github.io/). The repository's Settings → Pages source is GitHub Actions.
+Public site: [opensource.apigo.ai](https://opensource.apigo.ai/). The repository's Settings → Pages source is GitHub Actions.
+
+Custom-domain configuration:
+
+1. In Settings → Pages → Custom domain, save `opensource.apigo.ai` (without a scheme or path).
+2. In the `apigo.ai` DNS zone, keep a CNAME record named `opensource` pointing to `apigo-labs.github.io`.
+3. Wait for the DNS check and certificate issuance, then enable Enforce HTTPS. Verify the HTTPS site and the redirect from `https://apigo-labs.github.io/`.
+
+This custom Actions deployment does not require a repository `CNAME` file; the Pages setting is authoritative.
 
 `.github/workflows/pages.yml` runs on pushes to `main` or manual dispatch. It checks policy, tests, formatting, the production build, and local links before uploading and publishing `dist/`. Deployment uses the `github-pages` environment. Pages write and OIDC permissions are scoped to the deployment job; no personal access token is required.
 

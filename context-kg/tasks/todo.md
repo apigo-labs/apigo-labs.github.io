@@ -148,18 +148,18 @@ CodeGraph 同步完成，覆盖 10 个文件、121 个节点。动效链路为 `
 
 - [x] Confirm the correction: retain the original fiber image, brightness, drift, and composition.
 - [x] Remove the digital circuit overlay and add sparse glowing particles along curved fiber paths.
-- [ ] Verify desktop/mobile, pause controls, required checks, and publication.
+- [x] Verify desktop/mobile, pause controls, required checks, and publication.
 
 ### Review
 
-The previous circuit treatment changed the visual identity too much. This correction restores the original base and adds particles only. Desktop and 390 px mobile previews confirm the restored artwork, no circuit overlay, and no horizontal overflow. The pause control freezes both the image and particles. Both prefix builds and 15 policy tests pass. Publication is the remaining step.
+The previous circuit treatment changed the visual identity too much. This correction restores the original base and adds particles only. Desktop and 390 px mobile previews confirm the restored artwork, no circuit overlay, and no horizontal overflow. The pause control freezes both the image and particles. Both prefix builds and 15 policy tests pass. Pages run `33859685330` successfully published commit `9507abd`. All 15 HTTPS resources match the local build. The production DOM confirms the original 0.84 image opacity and fiber drift, 22 particle paths, and no circuit tracks.
 
 ## 中文
 
 - [x] 确认纠正范围：保留原光纤图片、亮度、缓动与构图。
 - [x] 移除数字电路覆盖层，仅沿弧形光路添加稀疏发光粒子。
-- [ ] 验证桌面/手机、暂停控制、必需检查与发布。
+- [x] 验证桌面/手机、暂停控制、必需检查与发布。
 
 ### Review
 
-上一版电路化处理过度改变了主视觉，本次恢复原有基底，只添加粒子。桌面与 390 像素手机预览确认原图恢复、电路覆盖层移除且无横向溢出；暂停按钮同时冻结原图与粒子。两种前缀构建与 15 项规范测试通过，剩余步骤为发布。
+上一版电路化处理过度改变了主视觉，本次恢复原有基底，只添加粒子。桌面与 390 像素手机预览确认原图恢复、电路覆盖层移除且无横向溢出；暂停按钮同时冻结原图与粒子。两种前缀构建与 15 项规范测试通过，Pages 任务 `33859685330` 已成功发布提交 `9507abd`，全部 15 个 HTTPS 资源与本地构建一致。生产 DOM 确认原图透明度恢复为 0.84、光纤缓动启用、存在 22 条粒子路径且电路线条已移除。

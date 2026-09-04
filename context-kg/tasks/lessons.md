@@ -4,8 +4,6 @@
 
 - When asked to enrich an existing animation, preserve its artwork, brightness, geometry, and motion. Add particles as a secondary layer; do not replace the composition with a new circuit aesthetic.
 
-- **Digital motion:** When the user asks for a more digital flow, convey discrete signal transmission through paths, packets, and nodes. A drifting photograph alone is insufficient. Preserve readable negative space, the immersive layout, and shared motion preferences.
-
 - **Language contract:** The user requires English code comments and complete commit messages across all projects under `opensource/`. Documentation must have equivalent English and Simplified Chinese versions. This overrides the earlier Chinese-only artifact rule; conversation and localized product UI may remain Chinese. Enforce the rules with versioned guidance, staged-content/message hooks, and CI; verify translations manually.
 - **Independent navigation:** Product, Docs, Enterprise, Resources, and Community each require a distinct URL, relevant content, and a current-page state. Homepage anchors cannot replace these pages.
 - **MaaS narrative:** Lead with the open-source platform slogan and flowing light. Then explain multi-provider access, employee Token FinOps, and commercial intelligent model routing. State planned and contractual delivery boundaries; never invent usage or performance data.
@@ -17,8 +15,6 @@
 ## 中文
 
 - 为现有动效增加细节时，保留原图、亮度、几何与运动方式。粒子只作为附加层，不能擅自替换成电路风格。
-
-- **数字动效：** 用户要求流动效果更 digital 时，应通过路径、数据脉冲与节点表现离散信号传输，仅让照片漂移不够。保留文字留白、沉浸式布局与统一动效偏好。
 
 - **语言硬约束：** 用户要求 `opensource/` 下所有项目的代码注释与 commit 全文使用英文，文档同时提供等价的英文与简体中文。该要求覆盖此前产物仅中文的规则；对话与本地化产品界面可以保留中文。通过版本化规范、暂存内容/提交信息 hooks 与 CI 执行，并人工核对翻译。
 - **独立导航：** 产品、文档、企业、资源、社区各自拥有独立 URL、对应内容与当前页状态，不能用首页锚点替代。

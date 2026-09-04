@@ -170,7 +170,7 @@ The previous circuit treatment changed the visual identity too much. This correc
 
 - [x] Compare the reference pixels and inspect the production browser.
 - [x] Add a lossless delivery variant while preserving the original PNG.
-- [ ] Verify pixel equality, complete loading, required checks, and publication.
+- [x] Verify pixel equality, complete loading, required checks, and publication.
 
 ### Review
 
@@ -180,8 +180,20 @@ The supplied image and source PNG have identical pixels. The live image request 
 
 - [x] 对比参考图像素，检查生产浏览器。
 - [x] 增加无损加载格式，并保留原 PNG。
-- [ ] 验证像素一致、完整加载、必需检查与发布。
+- [x] 验证像素一致、完整加载、必需检查与发布。
 
 ### Review
 
 用户提供图片与源 PNG 像素完全相同。线上图片请求未完成且显示截断，原图必须保留在粒子层下面。无损 WebP 保留完全相同的 RGB 像素，将资源从 2,131,310 字节减至 1,419,928 字节。本地浏览器已完整加载并显示全图。两种前缀构建、15 项规范测试、格式与 TypeScript 检查均通过。
+
+## English
+
+### Publication verification
+
+Commit `05a7417` passed Pages run `33860729726` and checks run `33860729869`. The production browser reports `complete: true` for the WebP at 1672 × 941; the screenshot confirms the lower fibers are fully rendered beneath the particle layer. All 16 deployed files match the local build.
+
+## 中文
+
+### 发布验证
+
+提交 `05a7417` 通过 Pages 任务 `33860729726` 和检查任务 `33860729869`。生产浏览器的 WebP 图片状态为 `complete: true`，尺寸 1672 × 941；截图确认下半截光纤已完整显示，粒子仅叠加其上。全部 16 个部署文件与本地构建一致。

@@ -109,3 +109,35 @@ The existing CNAME points to `apigo-labs.github.io`. The site uses a custom GitH
 ### Review
 
 现有 CNAME 指向 `apigo-labs.github.io`。站点通过自定义 GitHub Actions 发布；自定义域名在 Pages 设置中配置，不需要仓库 CNAME 文件。GitHub 已确认 DNS 检查成功，证书就绪后已开启 Enforce HTTPS，HTTP 请求会跳转至 HTTPS。通过 HTTPS 获取的全部 15 个文件（包括自定义 404 响应）均与本地根路径构建一致。两种部署前缀构建、15 项规范测试、格式与 TypeScript 检查均通过。
+
+# Digital homepage motion / 首页数字流动效果
+
+## English
+
+### Specification and plan
+
+Keep the current slogan, immersive composition, official Logo, and MaaS product boundaries. Replace the dominant photographic drifting motion with crisp routing traces, discrete packet trains, and restrained node responses. Preserve the original image as a quiet fallback. Do not add simulated business metrics or decorative cards.
+
+- [x] Locate motion controls and inspect the existing hero visual.
+- [x] Implement responsive digital signal paths with shared pause/reduced-motion controls and offscreen suspension.
+- [x] Verify desktop/mobile appearance, actual animation progression and freezing, navigation, both builds, and policy checks.
+- [ ] Publish and verify the custom-domain site.
+
+### Review
+
+CodeGraph sync completed with 10 files and 121 nodes. The motion chain is `src/main.ts` → `updateMotion` → root `data-motion`; `src/immersive.ts` controls hero parallax and section navigation. HTML/CSS fall outside the graph index and are inspected directly. Scope is the homepage visual only. The hero now contains 28 SVG signal lanes, packet trains, seven nodes, and a restrained grid/scan. Successive browser screenshots confirm packet movement; pause persists across reloads, and the hero suspends offscreen and resumes on return. Desktop at 1265/1440 px and mobile at 320/390 px have no horizontal overflow. Reduced-motion behavior was checked against the existing shared CSS and preference logic; system preference emulation was not performed. Both deployment-prefix builds pass with 10 pages and 246 local references each; all 15 policy tests, formatting, and TypeScript checks pass. Publication remains pending.
+
+## 中文
+
+### 规格与计划
+
+保留当前 slogan、沉浸式构图、官方 Logo 与 MaaS 能力边界。将占主导的照片漂移动效调整为清晰的路由线、离散数据脉冲与克制的节点响应，原图作为低强度底层与降级展示。不添加虚构业务指标或装饰卡片。
+
+- [x] 定位动效控制，检查现有首屏视觉。
+- [x] 实现响应式数字信号路径，接入暂停/减少动画及离屏暂停。
+- [x] 验证桌面/手机视觉、实际动画推进与冻结、导航、两种构建和规范检查。
+- [ ] 发布并验证自定义域名站点。
+
+### Review
+
+CodeGraph 同步完成，覆盖 10 个文件、121 个节点。动效链路为 `src/main.ts` → `updateMotion` → 根节点 `data-motion`；`src/immersive.ts` 控制首屏视差与章节导航。HTML/CSS 不在图索引内，已直接检查。本次范围仅为首页视觉。首屏新增 28 条 SVG 信号线路、数据脉冲、7 个节点及克制的网格/扫描线。连续浏览器截图确认数据包移动；暂停状态在刷新后保留，离屏暂停、返回恢复。1265/1440 像素桌面与 320/390 像素手机视口无横向溢出。减少动画行为已检查现有共享 CSS 与偏好控制逻辑，未模拟系统偏好。两种部署前缀构建各验证 10 个页面和 246 个本地引用；15 项规范测试、格式与 TypeScript 检查均通过。发布待完成。

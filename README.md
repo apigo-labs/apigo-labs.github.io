@@ -39,7 +39,8 @@ npm run format:check
 - `/404.html`: the not-found page.
 - `src/style.css`: shared foundations, themes, navigation, documentation, and forms.
 - `src/editorial.css`: open editorial layouts, separators, and responsive behavior.
-- `src/immersive.css` / `src/immersive.ts`: continuous dark chapters, fiber artwork, scroll parallax, chapter navigation, and routing paths.
+- `src/immersive.css` / `src/immersive.ts`: continuous dark chapters, scroll parallax, chapter navigation, and routing paths.
+- `src/digital-flow.ts`: decorative SVG signal lanes, discrete packet trains, node responses, and offscreen suspension.
 - `src/main.ts`: navigation, theme and motion preferences, route selection, architecture tabs, copying, and email drafts. Shared controls follow the guide's language.
 
 Built with Vite, TypeScript, and static HTML. No database, environment secrets, third-party fonts, analytics, or externally hosted images are required. Deploy the build output to a static server with directory indexes. A custom domain has not been selected; configure canonical URLs, social images, and a sitemap when one is added. Serve `404.html` with HTTP 404 for missing pages.
@@ -95,12 +96,12 @@ This checkout uses `git@github-enterprises:apigo-labs/apigo-labs.github.io.git`.
 
 ## Materials and motion
 
-The homepage uses continuous graphite surfaces and full-width optical fibers to express model requests converging and flowing through an enterprise. Integration, FinOps, and routing use open connections, a cost attribution table, and selectable paths. Community, Cloud, and Enterprise use full-width rows. Editorial pages organize content with large headings, whitespace, and thin separators. Original Logo colors appear in selective light and interaction details.
+The homepage uses continuous graphite surfaces and full-width digital signal paths to express model requests converging and flowing through an enterprise. Integration, FinOps, and routing use open connections, a cost attribution table, and selectable paths. Community, Cloud, and Enterprise use full-width rows. Editorial pages organize content with large headings, whitespace, and thin separators. Original Logo colors appear in selective light and interaction details.
 
 The browser implements Fluent-inspired materials without Windows-native Mica or wallpaper access. [Mica](https://learn.microsoft.com/en-us/windows/apps/design/style/mica) and [Acrylic](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic) inform the distinction between diffuse neutral surfaces and translucent navigation.
 
 - The homepage remains dark. Other pages follow the system theme and support a saved manual preference.
-- Fiber drift, pointer parallax, and animated paths use native scrolling; chapter navigation never intercepts the scroll wheel.
+- Discrete packets travel along SVG routing traces with restrained node responses and a scanning line. The hero pauses offscreen. Pointer parallax and chapter navigation use native scrolling and never intercept the scroll wheel.
 - Background animation can be paused. Reduced-motion preferences and background tabs pause movement; touch devices do not use pointer parallax.
 - Browsers without `backdrop-filter` use solid navigation. Links and forms remain usable.
 
@@ -108,4 +109,4 @@ The browser implements Fluent-inspired materials without Windows-native Mica or 
 
 `public/brand/apigo-logo.png` is the original transparent Logo supplied by the owner (588 × 164). Preserve its pixels, proportions, and colors across navigation, footers, product diagrams, and the site icon.
 
-`public/media/maas-fiber-flow.png` is generated decorative artwork (1672 × 941), stored separately from the official Logo. It contains no customer identities or real usage data. It is served locally, preloaded on the homepage, and remains visible as a static image when motion is reduced.
+`public/media/maas-fiber-flow.png` is generated decorative artwork (1672 × 941), stored separately from the official Logo. It contains no customer identities or real usage data. It is served locally and preloaded on the homepage. It provides a quiet background beneath the digital paths and a fallback when JavaScript is unavailable. Reduced motion keeps the composition static.

@@ -1,3 +1,5 @@
+import "./digital-flow";
+
 const immersion = document.querySelector<HTMLElement>(".immersion");
 if (immersion) {
   const hero = immersion.querySelector<HTMLElement>(".immersive-hero");

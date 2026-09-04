@@ -96,6 +96,103 @@ body.immersive-site:after {
   opacity: 0.84;
   animation: fiber-drift 18s ease-in-out infinite alternate;
 }
+.hero-scene-inner.has-digital-flow img {
+  opacity: 0.07;
+  animation: none;
+}
+.digital-flow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  mask-image: linear-gradient(0deg, transparent, #000 18%, #000 95%);
+}
+.signal-grid-mark {
+  stroke: #aaa9c2;
+  stroke-width: 0.8;
+}
+.signal-grid {
+  opacity: 0.2;
+}
+.signal-lane {
+  --signal-tone: #879cf5;
+}
+.signal-violet {
+  --signal-tone: #bca4eb;
+}
+.signal-warm {
+  --signal-tone: #e6a171;
+}
+.signal-track {
+  stroke: var(--signal-tone);
+  stroke-width: 0.8;
+  stroke-linejoin: bevel;
+  opacity: 0.28;
+}
+.signal-packets {
+  stroke: var(--signal-tone);
+  stroke-width: 2;
+  stroke-dasharray: 10 5 2 5 2 156;
+  stroke-dashoffset: calc(var(--lane) * 27px);
+  animation: signal-transfer calc(12s + var(--lane) * 0.16s) linear infinite;
+  animation-delay: calc(var(--lane) * -0.47s);
+}
+.signal-lane:nth-child(3n) .signal-packets {
+  stroke: #e0e5ff;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 5 3 89;
+  opacity: 0.75;
+}
+.signal-node-frame {
+  stroke: var(--signal-tone);
+  stroke-width: 0.7;
+  fill: #0b0b0e;
+  opacity: 0.8;
+}
+.signal-node {
+  fill: var(--signal-tone);
+  animation: signal-response 4.8s ease-in-out infinite;
+  animation-delay: calc(var(--lane) * -0.4s);
+}
+.signal-scan {
+  stroke: #c4c9e6;
+  stroke-width: 1;
+  opacity: 0;
+  animation: signal-scan 14s linear infinite;
+}
+.immersive-hero[data-signal-active="false"] .digital-flow * {
+  animation-play-state: paused !important;
+}
+@keyframes signal-transfer {
+  to {
+    stroke-dashoffset: calc(var(--lane) * 27px - 900px);
+  }
+}
+@keyframes signal-response {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  45%,
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes signal-scan {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20%,
+  70% {
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateX(650px);
+    opacity: 0;
+  }
+}
 .hero-scene:after {
   content: "";
   position: absolute;
